@@ -24,30 +24,33 @@ fitzroy(NIWA), AIX (P575, Power6), IBM compiler
 **************************************************************************
 **************************************************************************
 
-Simple MPI: Each mpi process outputs its mpi rank and its hostname. 
+H000X
+Simple MPI
+    Each mpi process outputs its mpi rank and its hostname. 
+    
 
-H0001 Simple MPI, pan, GNU default
+H0001 pan, GNU default
     25.09.13 OK
     
-H0002 Simple MPI, pan, Intel compiler with module load
+H0002 pan, Intel compiler with module load
     25.09.13 only works if restricted to rack d
     27.09.13 OK
     
-H0003 Simple MPI, pan, GNU compiler with module load
+H0003 pan, GNU compiler with module load
     25.09.13 hits wall time with no output
 
-H0004 Simple MPI, kerr, IBM compiler
+H0004 kerr, IBM compiler
     30.09.13 OK
 
-H0005 Simple MPI, beatrice, IBM compiler
+H0005 beatrice, IBM compiler
     01.10.13 OK
 
-H0006 Simple MPI, foster, IBM compiler
+H0006 foster, IBM compiler
     01.10.13 core dump
 
-H0007 Simple MPI, foster, GNU compiler
+H0007 foster, GNU compiler
 
-H0008 Simple MPI, fitzroy, IBM compiler
+H0008 fitzroy, IBM compiler
     01.10.13 OK
 
 **************************************************************************
