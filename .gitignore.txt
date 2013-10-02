@@ -1,6 +1,0 @@
-# OS generated
-.DS_Store
-
-# job output files
-*.err
-*.out
