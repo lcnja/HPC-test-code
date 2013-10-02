@@ -1,0 +1,15 @@
+#! /bin/sh
+# @ job_name = h
+# @ output = $(job_name).$(schedd_host).$(jobid).out
+# @ error = $(job_name).$(schedd_host).$(jobid).err
+# @ account_no = nesi-staff
+# @ class = General
+# @ job_type = parallel
+# @ node = 1
+# @ tasks_per_node = 8
+# @ wall_clock_limit = 00:01:00
+##@  parallel_threads = 12
+#@ resources = ConsumableMemory(1gb)
+# @ queue
+
+./H

@@ -1,0 +1,29 @@
+# @ shell = /bin/ksh
+#
+# @ job_name = h
+#
+# @ job_type = bluegene
+#
+# @ wall_clock_limit = 00:01:00
+#
+# Groups to select from: UC, UC_merit, NZ, NZ_merit
+# @ group = UC
+#
+# Your project number, either bfcs or nesi, followed by 5 digits
+# @ account_no = bfcs00283
+#
+# @ output = $(job_name).$(schedd_host).$(jobid).out
+# @ error = $(job_name).$(schedd_host).$(jobid).err
+#
+# To receive an email when your job has completed:
+# @ notification       = never
+# @ notify_user        = j.rugis@auckland.ac.nz
+# 
+# @ class = bgp
+#
+# @ bg_connection = prefer_torus
+# @ bg_size = 64
+#
+# @ queue
+
+/bgsys/drivers/ppcfloor/bin/mpirun -mode VN -np 8 -exe ./H

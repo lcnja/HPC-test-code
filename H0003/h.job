@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#@ initialdir = /home/jrug001/HPC/H0003
+#@ wall_clock_limit = 00:01:00
+#@ notify_user = j.rugis@auckland.ac.nz
+#@ notification = complete
+
+#@ job_name = h
+#@ class = default
+#@ group = nesi
+#@ account_no = /nz/nesi
+#@ output = $(job_name).$(jobid).out
+#@ error = $(job_name).$(jobid).err
+
+##@ requirements=(Feature=="westmere")
+##@ requirements=(Feature=="sandybridge")
+##@ requirements=(Feature=="rackC" || Feature=="rackD")
+#@ requirements=(Feature=="rackA")
+
+#@ job_type = parallel
+#@ resources = ConsumableMemory(2gb) ConsumableVirtualMemory(2gb)
+
+#@ total_tasks = 8
+#@ node = 8
+
+##@ node = 8
+##@ tasks_per_node = 1
+
+##@ total_tasks = 8
+##@ blocking = 1
+##@ task_geometry = { (0) (1) (2) (3) (4) (5) (6) (7) }
+
+#@ queue
+
+let "limit = 2 * 1024 * 1024"
+ulimit -v ${limit} -m ${limit}
+
+module load openmpi/1.6_gcc-4.4.6
+mpirun --hostfile "$LOADL_HOSTFILE" -x LD_LIBRARY_PATH ./H
+

@@ -1,0 +1,39 @@
+# @ shell = /bin/ksh
+#
+# @ job_name = h
+#
+# @ job_type = parallel
+#
+# @ node = 1
+# @ tasks_per_node = 8
+#
+# @ wall_clock_limit = 00:01:00
+#
+# Groups to select from: UC, UC_merit, NZ, NZ_merit
+# @ group = UC
+#
+# Your project number, either bfcs or nesi, followed by 5 digits
+# @ account_no = bfcs00283
+#
+# @ output = $(job_name).$(schedd_host).$(jobid).out
+# @ error = $(job_name).$(schedd_host).$(jobid).err
+#
+# To receive an email when your job has completed:
+# @ notification       = never
+# @ notify_user        = j.rugis@auckland.ac.nz
+# 
+# @ class = p7linux
+#
+# To improve performance it is important to specify task and memory affinities 
+# @ rset = rset_mcm_affinity
+# @ task_affinity = core(1)
+# @ network.MPI_LAPI = sn_single,shared,US,,instances=2
+# @ queue
+  
+# suggested environment settings:
+export MP_EAGER_LIMIT=65536
+export MP_SHARED_MEMORY=yes
+export MEMORY_AFFINITY=MCM
+ 
+# Launch parallel job  
+poe ./H
