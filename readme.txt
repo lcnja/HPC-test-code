@@ -33,7 +33,6 @@ H0001 pan, GNU default
     25.09.13 OK
     
 H0002 pan, Intel compiler with module load
-    25.09.13 only works if restricted to rack d
     27.09.13 OK
     
 H0003 pan, GNU compiler with module load
