@@ -45,7 +45,7 @@ H0005 beatrice, IBM compiler
     01.10.13 OK
 
 H0006 foster, IBM compiler
-    01.10.13 core dump
+    04.10.13 OK
 
 H0007 foster, GNU compiler
 
