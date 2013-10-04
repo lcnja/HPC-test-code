@@ -30,27 +30,28 @@ Simple MPI
     
 
 H0001 pan, GNU default
-    25.09.13 OK
+    04.10.13 OK
     
 H0002 pan, Intel compiler with module load
-    27.09.13 OK
+    04.10.13 OK
     
 H0003 pan, GNU compiler with module load
-    25.09.13 hits wall time with no output
+    04.10.13 hits wall time with no output
 
 H0004 kerr, IBM compiler
-    30.09.13 OK
+    04.10.13 OK
 
 H0005 beatrice, IBM compiler
-    01.10.13 OK
+    04.10.13 OK
 
 H0006 foster, IBM compiler
     04.10.13 OK
 
 H0007 foster, GNU compiler
+    not attempted yet
 
 H0008 fitzroy, IBM compiler
-    01.10.13 OK
+    04.10.13 OK
 
 **************************************************************************
 **************************************************************************
