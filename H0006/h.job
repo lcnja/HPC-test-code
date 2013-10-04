@@ -4,7 +4,7 @@
 #
 # @ job_type = bluegene
 #
-# @ wall_clock_limit = 00:01:00
+# @ wall_clock_limit = 00:02:00
 #
 # Groups to select from: UC, UC_merit, NZ, NZ_merit
 # @ group = UC
@@ -16,7 +16,7 @@
 # @ error = $(job_name).$(schedd_host).$(jobid).err
 #
 # To receive an email when your job has completed:
-# @ notification       = never
+# @ notification       = complete
 # @ notify_user        = j.rugis@auckland.ac.nz
 # 
 # @ class = bgp
